@@ -1,6 +1,6 @@
 /* =========================================================
    DWI NOVAL KURNIAWAN
-   PROJECT DOCUMENTATION VIEWER
+   DOCUMENTATION VIEWER
 ========================================================= */
 
 
@@ -9,9 +9,8 @@ document.addEventListener(
     function () {
 
 
-
         /* =================================================
-           ELEMENTS
+           MODAL ELEMENTS
         ================================================= */
 
         const modal =
@@ -20,13 +19,13 @@ document.addEventListener(
             );
 
 
-        const modalProjectNumber =
+        const modalNumber =
             document.getElementById(
                 "modalProjectNumber"
             );
 
 
-        const modalProjectTitle =
+        const modalTitle =
             document.getElementById(
                 "modalProjectTitle"
             );
@@ -50,7 +49,7 @@ document.addEventListener(
             );
 
 
-        const modalClose =
+        const closeButton =
             document.getElementById(
                 "modalClose"
             );
@@ -62,7 +61,7 @@ document.addEventListener(
             );
 
 
-        const buttons =
+        const documentationButtons =
             document.querySelectorAll(
                 ".documentation-btn"
             );
@@ -70,31 +69,15 @@ document.addEventListener(
 
 
         /* =================================================
-           SAFETY CHECK
+           DOCUMENTATION DATA
         ================================================= */
 
-        if (!modal) {
-
-            console.error(
-                "Documentation modal tidak ditemukan."
-            );
-
-            return;
-
-        }
+        const documentationData = {
 
 
-
-        /* =================================================
-           PROJECT DOCUMENTATION DATA
-        ================================================= */
-
-        const projectDocumentation = {
-
-
-            /* =================================================
+            /* =============================================
                PROJECT 01
-            ================================================= */
+            ============================================== */
 
             project1: {
 
@@ -111,43 +94,39 @@ document.addEventListener(
                             "image/project-01-hardware.jpg",
 
                         caption:
-                            "Hardware implementation of the three-phase interleaved buck converter system, including the implementation module, DC link source, signal generator, digital oscilloscope, and digital signal uploader."
+                            "Hardware implementation of the three-phase interleaved buck converter system."
                     },
-
 
                     {
                         src:
                             "image/project-01-current-experimental.jpg",
 
                         caption:
-                            "Experimental current waveform measurement showing the three phase currents and total current of the implemented converter."
+                            "Experimental current waveform measurement of the implemented converter."
                     },
-
 
                     {
                         src:
                             "image/project-01-current-simulation.jpg",
 
                         caption:
-                            "Simulation result showing the three phase currents and total current before hardware comparison."
+                            "Simulation result showing the three-phase current response."
                     },
-
 
                     {
                         src:
                             "image/project-01-response-experimental.jpg",
 
                         caption:
-                            "Experimental step-response result used to evaluate the closed-loop current controller response."
+                            "Experimental step-response result of the closed-loop current controller."
                     },
-
 
                     {
                         src:
                             "image/project-01-response-simulation.jpg",
 
                         caption:
-                            "Simulation step-response result used for comparison and controller performance validation."
+                            "Simulation step-response result used for controller validation."
                     }
 
                 ]
@@ -155,10 +134,9 @@ document.addEventListener(
             },
 
 
-
-            /* =================================================
+            /* =============================================
                PROJECT 02
-            ================================================= */
+            ============================================== */
 
             project2: {
 
@@ -175,7 +153,7 @@ document.addEventListener(
                             "image/project-02-hardware.jpg",
 
                         caption:
-                            "Overall hardware implementation of the Haiwell PLC-based PWM control system for synchronous generator excitation."
+                            "Overall hardware implementation of the Haiwell PLC-based synchronous generator excitation system."
                     }
 
                 ]
@@ -183,10 +161,9 @@ document.addEventListener(
             },
 
 
-
-            /* =================================================
+            /* =============================================
                PROJECT 03
-            ================================================= */
+            ============================================== */
 
             project3: {
 
@@ -203,16 +180,15 @@ document.addEventListener(
                             "image/project-03-hardware.jpg",
 
                         caption:
-                            "Hardware implementation of the structural displacement monitoring system using dual MPU9250 IMU sensors and ESP32."
+                            "Hardware implementation using dual MPU9250 IMU sensors and ESP32."
                     },
-
 
                     {
                         src:
                             "image/project-03-screenshot-web-pemantauan.jpg",
 
                         caption:
-                            "Web-based structural monitoring dashboard displaying real-time sensor data transmitted through MQTT."
+                            "Web-based monitoring dashboard displaying real-time sensor data."
                     }
 
                 ]
@@ -220,10 +196,9 @@ document.addEventListener(
             },
 
 
-
-            /* =================================================
+            /* =============================================
                PROJECT 04
-            ================================================= */
+            ============================================== */
 
             project4: {
 
@@ -240,7 +215,7 @@ document.addEventListener(
                             "image/project-04-hardware-multicell.jpg",
 
                         caption:
-                            "Hardware implementation of the multicell H-bridge inverter using STM32F4-based switching control."
+                            "Hardware implementation of the multicell H-bridge inverter using STM32F4."
                     }
 
                 ]
@@ -248,10 +223,9 @@ document.addEventListener(
             },
 
 
-
-            /* =================================================
+            /* =============================================
                PROJECT 05
-            ================================================= */
+            ============================================== */
 
             project5: {
 
@@ -268,7 +242,174 @@ document.addEventListener(
                             "image/project-05-hardware-5-level.jpg",
 
                         caption:
-                            "Hardware prototype of the five-level single-phase buck-boost inverter using seven active power switches and Arduino Mega-based switching control."
+                            "Hardware prototype of the five-level single-phase buck-boost inverter."
+                    }
+
+                ]
+
+            },
+
+
+            /* =============================================
+               TEACHING ASSISTANT
+            ============================================== */
+
+            teachingAssistant: {
+
+                number:
+                    "EXPERIENCE / TEACHING ASSISTANT",
+
+                title:
+                    "Teaching Assistant — Electrical Engineering Laboratories",
+
+                images: [
+
+                    {
+                        src:
+                            "image/teaching-assistant-sk-dekan.jpg",
+
+                        caption:
+                            "Dean's decree appointing Dwi Noval Kurniawan as a Teaching Assistant in the Faculty of Engineering."
+                    }
+
+                ]
+
+            },
+
+
+            /* =============================================
+               MAINTENANCE
+            ============================================== */
+
+            maintenance: {
+
+                number:
+                    "EXPERIENCE / MAINTENANCE",
+
+                title:
+                    "Maintenance Division Intern — PT POMI, Paiton",
+
+                images: [
+
+                    {
+                        src:
+                            "image/maintenance-sertifikat-magang.jpg",
+
+                        caption:
+                            "Internship certificate from PT POMI."
+                    },
+
+                    {
+                        src:
+                            "image/maintenance-foto-lapangan.jpg",
+
+                        caption:
+                            "Field documentation during the maintenance internship at the power plant."
+                    }
+
+                ]
+
+            },
+
+
+            /* =============================================
+               PUBLICATION
+            ============================================== */
+
+            publication: {
+
+                number:
+                    "RESEARCH / ICPERE 2026",
+
+                title:
+                    "Single Output Current Sensor Implementation in Three-Phase Buck Converter for Controlled Excitation of Synchronous Generators",
+
+                images: [
+
+                    {
+                        src:
+                            "image/publication-presentasi-01.jpg",
+
+                        caption:
+                            "Presentation of the research at ICPERE 2026."
+                    },
+
+                    {
+                        src:
+                            "image/publication-presentasi-02.jpg",
+
+                        caption:
+                            "Research presentation session at ICPERE 2026."
+                    },
+
+                    {
+                        src:
+                            "image/publication-sertifikat-author.jpg",
+
+                        caption:
+                            "ICPERE 2026 certificate recognizing the author role."
+                    },
+
+                    {
+                        src:
+                            "image/publication-sertifikat-presenter.jpg",
+
+                        caption:
+                            "ICPERE 2026 certificate recognizing the presenter role."
+                    }
+
+                ]
+
+            },
+
+
+            /* =============================================
+               ADARO SCHOLARSHIP
+            ============================================== */
+
+            scholarship: {
+
+                number:
+                    "EDUCATION / SCHOLARSHIP",
+
+                title:
+                    "Adaro Scholarship",
+
+                images: [
+
+                    {
+                        src:
+                            "image/adaro-scholarship.jpg",
+
+                        caption:
+                            "Scholarship statement/document confirming the Adaro Scholarship award."
+                    }
+
+                ]
+
+            },
+
+
+            /* =============================================
+               VICE PRESIDENT
+            ============================================== */
+
+            vicePresident: {
+
+                number:
+                    "LEADERSHIP / BEM",
+
+                title:
+                    "Vice President — Student Executive Board, Faculty of Engineering",
+
+                images: [
+
+                    {
+                        src:
+                            "image/vice-president-sertifikat.jpg",
+
+                        caption:
+                            "Certificate recognizing the Vice President position in the Student Executive Board of the Faculty of Engineering."
                     }
 
                 ]
@@ -284,20 +425,19 @@ document.addEventListener(
         ================================================= */
 
         function showMainImage(
-            src,
-            caption
+            imageData
         ) {
 
             modalMainImage.src =
-                src;
+                imageData.src;
 
 
             modalMainImage.alt =
-                caption;
+                imageData.caption;
 
 
             modalCaption.textContent =
-                caption;
+                imageData.caption;
 
         }
 
@@ -308,25 +448,20 @@ document.addEventListener(
         ================================================= */
 
         function createThumbnails(
-            project
+            images
         ) {
 
 
-            /* Clear previous thumbnails */
+            thumbnailContainer.innerHTML =
+                "";
 
-            thumbnailContainer.innerHTML = "";
 
-
-            project.images.forEach(
+            images.forEach(
                 function (
                     imageData,
                     index
                 ) {
 
-
-                    /* -------------------------------------
-                       BUTTON
-                    ------------------------------------- */
 
                     const thumbnail =
                         document.createElement(
@@ -348,7 +483,7 @@ document.addEventListener(
                     );
 
 
-                    /* First image active */
+                    /* First active */
 
                     if (
                         index === 0
@@ -361,10 +496,7 @@ document.addEventListener(
                     }
 
 
-
-                    /* -------------------------------------
-                       IMAGE
-                    ------------------------------------- */
+                    /* Image */
 
                     const image =
                         document.createElement(
@@ -381,9 +513,7 @@ document.addEventListener(
 
 
 
-                    /* -------------------------------------
-                       NUMBER
-                    ------------------------------------- */
+                    /* Number */
 
                     const number =
                         document.createElement(
@@ -405,10 +535,6 @@ document.addEventListener(
 
 
 
-                    /* -------------------------------------
-                       ADD ELEMENTS
-                    ------------------------------------- */
-
                     thumbnail.appendChild(
                         image
                     );
@@ -420,47 +546,34 @@ document.addEventListener(
 
 
 
-                    /* -------------------------------------
-                       CLICK EVENT
-                    ------------------------------------- */
+                    /* Thumbnail click */
 
                     thumbnail.addEventListener(
                         "click",
                         function () {
 
 
-                            /* Change main image */
-
                             showMainImage(
-                                imageData.src,
-                                imageData.caption
+                                imageData
                             );
 
 
-
-                            /* Remove active */
-
-                            const allThumbnails =
-                                thumbnailContainer.querySelectorAll(
+                            document
+                                .querySelectorAll(
                                     ".documentation-thumbnail"
+                                )
+                                .forEach(
+                                    function (
+                                        item
+                                    ) {
+
+                                        item.classList.remove(
+                                            "active"
+                                        );
+
+                                    }
                                 );
 
-
-                            allThumbnails.forEach(
-                                function (
-                                    item
-                                ) {
-
-                                    item.classList.remove(
-                                        "active"
-                                    );
-
-                                }
-                            );
-
-
-
-                            /* Add active */
 
                             thumbnail.classList.add(
                                 "active"
@@ -470,15 +583,9 @@ document.addEventListener(
                     );
 
 
-
-                    /* -------------------------------------
-                       ADD TO CONTAINER
-                    ------------------------------------- */
-
                     thumbnailContainer.appendChild(
                         thumbnail
                     );
-
 
                 }
             );
@@ -492,25 +599,23 @@ document.addEventListener(
         ================================================= */
 
         function openDocumentation(
-            projectId
+            documentationId
         ) {
 
 
-            const project =
-                projectDocumentation[
-                    projectId
+            const documentation =
+                documentationData[
+                    documentationId
                 ];
 
 
-            /* Project exists? */
-
             if (
-                !project
+                !documentation
             ) {
 
                 console.error(
-                    "Project tidak ditemukan:",
-                    projectId
+                    "Documentation tidak ditemukan:",
+                    documentationId
                 );
 
                 return;
@@ -519,43 +624,34 @@ document.addEventListener(
 
 
 
-            /* ---------------------------------------------
-               SET INFORMATION
-            --------------------------------------------- */
+            /* Set modal information */
 
-            modalProjectNumber.textContent =
-                project.number;
+            modalNumber.textContent =
+                documentation.number;
 
 
-            modalProjectTitle.textContent =
-                project.title;
+            modalTitle.textContent =
+                documentation.title;
 
 
 
-            /* ---------------------------------------------
-               FIRST IMAGE
-            --------------------------------------------- */
+            /* Main image */
 
             showMainImage(
-                project.images[0].src,
-                project.images[0].caption
+                documentation.images[0]
             );
 
 
 
-            /* ---------------------------------------------
-               THUMBNAILS
-            --------------------------------------------- */
+            /* Thumbnails */
 
             createThumbnails(
-                project
+                documentation.images
             );
 
 
 
-            /* ---------------------------------------------
-               OPEN MODAL
-            --------------------------------------------- */
+            /* Open modal */
 
             modal.classList.add(
                 "active"
@@ -573,27 +669,47 @@ document.addEventListener(
             );
 
 
-            /* Scroll modal to top */
-
-            const content =
-                document.querySelector(
-                    ".documentation-content"
-                );
-
-
-            if (content) {
-
-                content.scrollTop =
-                    0;
-
-            }
-
         }
 
 
 
         /* =================================================
-           CLOSE DOCUMENTATION
+           BUTTON EVENT
+        ================================================= */
+
+        documentationButtons.forEach(
+            function (
+                button
+            ) {
+
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+
+                        const documentationId =
+                            this.getAttribute(
+                                "data-documentation"
+                            );
+
+
+                        openDocumentation(
+                            documentationId
+                        );
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+
+        /* =================================================
+           CLOSE MODAL
         ================================================= */
 
         function closeDocumentation() {
@@ -615,55 +731,7 @@ document.addEventListener(
             );
 
 
-            /* Reset image after close */
-
-            setTimeout(
-                function () {
-
-                    modalMainImage.src =
-                        "";
-
-                    modalCaption.textContent =
-                        "";
-
-                },
-                200
-            );
-
         }
-
-
-
-        /* =================================================
-           BUTTON EVENTS
-        ================================================= */
-
-        buttons.forEach(
-            function (
-                button
-            ) {
-
-
-                button.addEventListener(
-                    "click",
-                    function () {
-
-
-                        const projectId =
-                            button.getAttribute(
-                                "data-project"
-                            );
-
-
-                        openDocumentation(
-                            projectId
-                        );
-
-                    }
-                );
-
-            }
-        );
 
 
 
@@ -671,13 +739,9 @@ document.addEventListener(
            CLOSE BUTTON
         ================================================= */
 
-        modalClose.addEventListener(
+        closeButton.addEventListener(
             "click",
-            function () {
-
-                closeDocumentation();
-
-            }
+            closeDocumentation
         );
 
 
@@ -688,17 +752,13 @@ document.addEventListener(
 
         modalOverlay.addEventListener(
             "click",
-            function () {
-
-                closeDocumentation();
-
-            }
+            closeDocumentation
         );
 
 
 
         /* =================================================
-           ESCAPE KEY
+           ESC KEY
         ================================================= */
 
         document.addEventListener(
@@ -725,7 +785,7 @@ document.addEventListener(
 
 
         /* =================================================
-           MAIN IMAGE → OPEN LARGE IMAGE
+           MAIN IMAGE CLICK
         ================================================= */
 
         modalMainImage.addEventListener(
@@ -734,33 +794,15 @@ document.addEventListener(
 
 
                 if (
-                    modalMainImage.src
+                    this.src
                 ) {
 
                     window.open(
-                        modalMainImage.src,
+                        this.src,
                         "_blank"
                     );
 
                 }
-
-            }
-        );
-
-
-
-        /* =================================================
-           IMAGE ERROR HANDLER
-        ================================================= */
-
-        modalMainImage.addEventListener(
-            "error",
-            function () {
-
-                console.error(
-                    "Gambar dokumentasi gagal dimuat:",
-                    modalMainImage.src
-                );
 
             }
         );
